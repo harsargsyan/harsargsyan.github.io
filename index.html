@@ -1,9 +1,101 @@
 <!DOCTYPE html>
 <html>
-    <head>
+<head>
+  <meta charset="UTF-8">
+  <title>Wedding Website</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
+  <style>
+    /* Customize the background and font color for a wedding theme */
+    body {
+      background-color: #f8f8f8;
+      color: #333;
+    }
 
-    </head>
-    <body>
-        <h1>this is header 1</h1>
-    </body>
+    /* Customize the font and size for headings */
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 36px;
+    }
+
+    /* Customize the mild color scheme */
+    .jumbotron {
+      background-color: #f7f7f7;
+    }
+
+    h1, h2 {
+      color: #555;
+    }
+
+    h2 {
+      border-bottom: 2px solid #555;
+      padding-bottom: 10px;
+    }
+
+    section {
+      background-color: #fff;
+      padding: 40px 0;
+    }
+
+    /* Center the images in the carousel */
+    .carousel-item img {
+      display: block;
+      margin: 0 auto;
+      height: 500px; /* Adjust the height as needed */
+      max-width: 80%; /* Adjust the width as needed */
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+  <!-- Hero Section -->
+  <header class="jumbotron text-center">
+    <div class="container">
+      <h1>Save the Date</h1>
+      <p>Join us as we celebrate our wedding</p>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section id="about" class="py-5">
+    <div class="container text-center">
+      <h2>About Us</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla mattis tellus eu mauris porta, id eleifend ipsum aliquam. Nullam in ultrices ex.</p>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="py-5">
+    <div class="container text-center">
+      <h2>Gallery</h2>
+      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></li>
+          <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></li>
+          <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="images/Ararat.jpg" class="d-block mx-auto w-100" alt="Image 1">
+          </div>
+          <div class="carousel-item">
+            <img src="images/Khustup.jpg" class="d-block mx-auto w-100" alt="Image 2">
+          </div>
+          <div class="carousel-item">
+            <img src="images/Nshan.jpg" class="d-block mx-auto w-100" alt="Image 3">
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
