@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="EN">  
 <head>
   <meta charset="UTF-8">
   <title>Wedding Website</title>
@@ -60,13 +60,30 @@
       transform: translate(-50%, -50%);
       border: 0;
     }
+
+    #about {
+      font-family: 'CustomFont', sans-serif;
+      font-size: xx-large;
+    }   
+
+    .carousel-arrow {
+      width: 40%;
+      height: 30%;
+    }
+
+    @font-face {
+      font-family: 'CustomFont';
+      src: url("fonts/ArTar_TumanianDzeragir_U.ttf") format('truetype');
+    }
+
   </style>
 </head>
+
 <body>
   <!-- Countdown Section -->
   <section id="countdown" class="py-5">
     <div class="container">
-      <h2>Հարսանիքին մնաց</h2>
+      <h3>Հարսանիքին մնաց</h3>
       <div id="timer">
         <span id="days"></span>
         <span id="hours"></span>
@@ -78,27 +95,22 @@
 
   <script>
     var countDownDate = new Date("August 6, 2023 00:00:00").getTime();
-
     // Update the countdown every 1 second
     var countdown = setInterval(function() {
       // Get the current date and time
       var now = new Date().getTime();
-
       // Find the distance between now and the countdown date
       var distance = countDownDate - now;
-
       // Calculate days, hours, minutes, and seconds
       var days = Math.floor(distance / (1000 * 60 * 60 * 24));
       var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
       var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
       var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
       // Display the countdown
       document.getElementById("days").innerHTML = days + "օր";
       document.getElementById("hours").innerHTML = hours + "ժ";
       document.getElementById("minutes").innerHTML = minutes + "ր";
       document.getElementById("seconds").innerHTML = seconds + "վ";
-
       // If the countdown is finished, display a message
       if (distance < 0) {
         clearInterval(countdown);
@@ -110,8 +122,8 @@
   <!-- About Section -->
   <section id="about" class="py-5">
     <div class="container text-center">
-      <h2>About Us</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla mattis tellus eu mauris porta, id eleifend ipsum aliquam. Nullam in ultrices ex.</p>
+      <p>Սիրով հրավիրում ենք Ձեզ կիսելու մեզ հետ մեր կյանքի կարևոր և հիշարժան օրը<br/>
+        Սպասում ենք Ձեզ մեր հարսանիքին</p>
     </div>
   </section>
 
@@ -137,16 +149,16 @@
           </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
+          <!-- Update the left arrow image source -->
+          <img src="images/leftArr.png" class="carousel-arrow" alt="Previous">
         </a>
         <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
+          <!-- Update the right arrow image source -->
+          <img src="images/rightArr.png" class="carousel-arrow" alt="Next">
         </a>
       </div>
     </div>
-  </section>
+  </section>  
   
   <!-- Location Section -->
 <section id="location" class="py-5">
@@ -158,6 +170,6 @@
   </div>
 </section>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
