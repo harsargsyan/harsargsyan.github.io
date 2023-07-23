@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
   <style>
     body {
-      background-image: url('images/wedding.jpg');
+      background-image: url('images/cover.jpg');
       background-repeat: no-repeat;
       background-size: cover;
       color: #333;
@@ -22,7 +22,7 @@
     }
 
     section {
-      background-color: rgba(255, 255, 255, 0.9);
+      background-color: rgba(255, 255, 255, 0.5);
       padding: 40px 0;
     }
 
@@ -62,7 +62,7 @@
     }
 
     #about {
-      font-family: 'CustomFont', sans-serif;
+      font-family: 'CustomFont', serif;
       font-size: xx-large;
     }   
 
@@ -73,28 +73,44 @@
 
     @font-face {
       font-family: 'CustomFont';
-      src: url("fonts/ArTar_TumanianDzeragir_U.ttf") format('truetype');
+      src: url("fonts/SHK_Dzeragir.otf") format('opentype');
+    }
+
+    #date {
+      font-size: 200%;
+      color: rgb(179, 134, 9);
     }
 
   </style>
 </head>
 
-<body>
+<body>  
+  <!-- About Section -->
+  <section id="about" class="py-5">
+    <div class="container text-center">
+      <p>Սիրով հրավիրում ենք Ձեզ կիսելու մեզ հետ մեր կյանքի կարևոր և հիշարժան օրը<br/><br/>
+      <span id="date">06.08.2023</span><br/><br/>
+        Պսակադրությունը ժ 15:00 Վահանավանքում<br/><br/>
+        Հարսանյաց հանդիսությունը ժ 17:00 Արարատ ռեստորանում<br/><br/>                
+        Սպասում ենք Ձեզ մեր հարսանիքին</p>
+    </div>
+  </section>
+
   <!-- Countdown Section -->
   <section id="countdown" class="py-5">
     <div class="container">
-      <h3>Հարսանիքին մնաց</h3>
       <div id="timer">
         <span id="days"></span>
         <span id="hours"></span>
         <span id="minutes"></span>
         <span id="seconds"></span>
+        <span>- ից</span>
       </div>
     </div>
   </section>
 
   <script>
-    var countDownDate = new Date("August 6, 2023 00:00:00").getTime();
+    var countDownDate = new Date("August 6, 2023 17:00:00").getTime();
     // Update the countdown every 1 second
     var countdown = setInterval(function() {
       // Get the current date and time
@@ -117,15 +133,7 @@
         document.getElementById("timer").innerHTML = "The wedding has begun!";
       }
     }, 1000);
-  </script>
-
-  <!-- About Section -->
-  <section id="about" class="py-5">
-    <div class="container text-center">
-      <p>Սիրով հրավիրում ենք Ձեզ կիսելու մեզ հետ մեր կյանքի կարևոր և հիշարժան օրը<br/>
-        Սպասում ենք Ձեզ մեր հարսանիքին</p>
-    </div>
-  </section>
+  </script>  
 
   <!-- Gallery Section -->
   <section id="gallery" class="py-5">
